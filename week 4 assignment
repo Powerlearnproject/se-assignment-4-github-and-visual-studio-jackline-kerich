@@ -1,0 +1,102 @@
+GitHub Overview
+GitHub is a cloud-based platform that hosts Git repositories, providing tools for version control and collaborative software development. It supports developers in managing and sharing their code, tracking changes, and collaborating with others.
+
+Primary Functions and Features:
+Repositories: Store and manage code.
+Branches: Work on different versions of a project simultaneously.
+Pull Requests: Propose changes and facilitate code reviews.
+Issues: Track bugs and feature requests.
+Actions: Automate workflows with CI/CD.
+Code Review: Review and comment on code changes.
+Project Management: Organize and prioritize tasks.
+Repositories on GitHub
+A GitHub repository is a storage space for your project, including all files and their revision history.
+
+Creating a New Repository:
+Sign in to GitHub.
+Click the “+” icon and select “New repository”.
+Fill in the repository name and description.
+Choose visibility (public or private).
+Initialize with a README (optional).
+Click “Create repository”.
+Essential Elements:
+README.md: Overview of the project.
+LICENSE: Licensing information.
+.gitignore: Files to ignore in version control.
+CONTRIBUTING.md: Guidelines for contributing.
+Version Control with Git
+Version control is the practice of tracking and managing changes to software code. Git is a distributed version control system that allows multiple developers to work on a project simultaneously.
+
+Enhancements by GitHub:
+Centralized Hosting: Access repositories from anywhere.
+Collaboration Tools: Issues, pull requests, and code reviews.
+History Tracking: View and revert to previous versions.
+Branching and Merging in GitHub
+Branches are separate lines of development within a repository. They allow developers to work on features or fixes without affecting the main codebase.
+
+Creating and Merging Branches:
+Create a Branch: git checkout -b new-branch
+Make Changes: Edit files and commit changes.
+Push Branch: git push origin new-branch
+Create Pull Request: Propose changes to the main branch.
+Review and Merge: Review changes and merge the branch.
+Pull Requests and Code Reviews
+A pull request is a way to propose changes to a repository. It facilitates code reviews and collaboration by allowing others to review and discuss the changes before merging.
+
+Creating and Reviewing Pull Requests:
+Create Pull Request: From the branch, click “New pull request”.
+Review Changes: Reviewers comment and suggest changes.
+Merge Pull Request: Once approved, merge the changes.
+GitHub Actions
+GitHub Actions automate workflows, such as CI/CD pipelines.
+
+Example CI/CD Pipeline:
+Create Workflow File: .github/workflows/ci.yml
+Define Jobs: Specify jobs like build, test, and deploy.
+Run Actions: Automatically run actions on events like push or pull request.
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - run: npm install
+    - run: npm test
+
+Introduction to Visual Studio
+Visual Studio is an integrated development environment (IDE) for building applications. It offers advanced debugging, code editing, and project management tools.
+
+Key Features:
+IntelliSense: Code completion and suggestions.
+Debugger: Advanced debugging tools.
+Designer: Visual design tools for UI.
+Difference from Visual Studio Code:
+Visual Studio: Full-featured IDE for complex projects.
+Visual Studio Code: Lightweight code editor for quick edits and debugging.
+Integrating GitHub with Visual Studio
+Clone Repository: Use GitHub to clone the repository.
+Open in Visual Studio: Open the cloned repository.
+Commit and Push: Make changes, commit, and push to GitHub.
+Enhancements:
+Seamless Workflow: Directly manage GitHub repositories.
+Integrated Tools: Use Visual Studio’s debugging and editing tools.
+Debugging in Visual Studio
+Debugging Tools:
+
+Breakpoints: Pause execution at specific lines.
+Watch Window: Monitor variables and expressions.
+Call Stack: View the call hierarchy.
+Usage:
+Set Breakpoints: Click in the margin next to the line number.
+Run Debugger: Start debugging and inspect variables.
+Collaborative Development using GitHub and Visual Studio
+Example Project: A web application where multiple developers work on different features. GitHub manages version control and collaboration, while Visual Studio provides advanced development and debugging tools.
+
+By integrating GitHub with Visual Studio, developers can streamline their workflow, from writing and reviewing code to debugging and deploying applications.
